@@ -1,6 +1,6 @@
 import com.fasterxml.jackson.annotation.JsonProperty;
 
-public class Json {
+public class JsonToJava {
 
     private final String id;
     private final String text;
@@ -8,11 +8,11 @@ public class Json {
     private final String user;
     private final String upvotes;
 
-    public Json (@JsonProperty("") String id,
-                 @JsonProperty("text") String text,
-                 @JsonProperty("type") String type,
-                 @JsonProperty("user") String user,
-                 @JsonProperty("upvotes") String upvotes) {
+    public JsonToJava(@JsonProperty("id") String id,
+                      @JsonProperty("text") String text,
+                      @JsonProperty("type") String type,
+                      @JsonProperty("user") String user,
+                      @JsonProperty("upvotes") String upvotes) {
         this.id = id;
         this.text = text;
         this.type = type;
@@ -42,11 +42,12 @@ public class Json {
 
     @Override
     public String toString() {
-        return "Json" +
-                "\n id" + id +
-                "\n text" + text +
-                "\n type" + type +
-                "\n user" + user +
-                "\n upvotes" + upvotes;
+        return "Запись" +
+                "\n Id: " + id +
+                "\n Текст: " + text +
+                "\n Тип: " + type +
+                "\n Пользователь: " + user +
+                "\n Голоса: " + upvotes +
+                "\n------";
     }
 }
